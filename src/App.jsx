@@ -251,10 +251,8 @@ const StarRating = () => {
     setRating(newRating);
     try {
       const response = await axios.post(
-        "https://pmponline.co.in/sdetest/requests.php",
+        "https://pmponline.co.in/sdetest/requests.php", newRating,
         {
-          method: "POST",
-          body: JSON.stringify({ rating: newRating }),
           headers: {
             "Content-Type": "application/json",
           },
