@@ -203,7 +203,7 @@ const StarRating = () => {
       permissionId: 5,
     },
   ];
-
+// Task 1 :
   const filteredItems = menuItems.filter((item) => {
     if (
       (item.permissionId && [3, 4].includes(item.permissionId)) ||
@@ -216,7 +216,7 @@ const StarRating = () => {
   });
 
   console.log(filteredItems);
-
+// Task 2: api call on the given endpoint and the resultant array
   const sendRequest = async (item) => {
     try {
       const response = await axios.post(
@@ -246,7 +246,7 @@ const StarRating = () => {
   };
 
   processItems();
-
+// Task 3 : api call to post rating change
   const handleRatingChange = async (newRating) => {
     setRating(newRating);
     try {
@@ -265,7 +265,7 @@ const StarRating = () => {
       console.error("Error occurred while sending rating:", error);
     }
   };
-
+// rating component 
   return (
     <div>
       <h2>Rating</h2>
